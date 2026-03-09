@@ -1,0 +1,15 @@
+.LinksWrapper {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.Link {
+    padding: 8px 12px;
+    transition: opacity 0.3s;
+    background-color: lightcoral;
+}
+
+.Link:hover {
+    opacity: 0.7;
+}

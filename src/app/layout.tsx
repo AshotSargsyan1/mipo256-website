@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import styles from "./styles.module.css"
 import localFont from "next/font/local";
+import { Header, Footer } from "@/components";
 
 const Golos_Text = localFont({
   src: "../assets/fonts/Variable_Golos_Text.woff2",
@@ -21,9 +22,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={Golos_Text.className}>
+        <Header />
         <main className={styles.Main}>
           {children}
         </main>
+        <Footer />
       </body>
     </html>
   );

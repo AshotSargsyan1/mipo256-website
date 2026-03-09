@@ -1,4 +1,5 @@
 :root {
+    --mp-header-height: 65px;
     --mp-primary-black: #000;
     --mp-primary-white: #fff;
 }
