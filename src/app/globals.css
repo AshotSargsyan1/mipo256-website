@@ -1,42 +1,44 @@
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+    --mp-primary-black: #000;
+    --mp-primary-white: #fff;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
-html,
+html {
+    scroll-behavior: smooth;
+}
+
 body {
-  max-width: 100vw;
-  overflow-x: hidden;
+    font-size: 18px;
+    line-height: 1.4;
+    background-color: var(--mp-primary-white);
+    color: var(--mp-primary-black);
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-* {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
+ul,
+ol {
+    list-style: none;
 }
 
 a {
-  color: inherit;
-  text-decoration: none;
+    text-decoration: none;
+    color: inherit;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
+button {
+    background-color: transparent;
+    border: none;
+}
+
+.MainContainer {
+    margin: 0 auto;
+    max-width: 1330px;
+    padding-inline: 25px;
 }
