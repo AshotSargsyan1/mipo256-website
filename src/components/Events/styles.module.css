@@ -1,0 +1,93 @@
+.MainWrapper {
+    margin-block: 140px;
+}
+
+.CardsWrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+.Card {
+    background-color: #f9fafb;
+    border: 1px solid var(--mp-medium-grey);
+    border-radius: 16px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    transition: all 0.3s;
+}
+
+.Card:hover {
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    box-shadow: var(--mp-box-shadow-bold);
+    transform: translateY(-10px);
+}
+
+.CardMeta {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.Date {
+    font-size: 14px;
+    color: var(--mp-bold-grey);
+}
+
+.Badge {
+    font-size: 14px;
+    padding: 2px 12px;
+    border-radius: 8px;
+    background-color: var(--mp-primary-light-green);
+    color: var(--mp-primary-green);
+}
+
+.CardTitle {
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.Location {
+    font-size: 14px;
+    color: var(--mp-bold-grey);
+}
+
+.Link {
+    font-size: 14px;
+    color: var(--mp-primary-green);
+    margin-top: auto;
+    transition: opacity 0.3s;
+}
+
+.Link:hover {
+    opacity: 0.7;
+}
+
+.TabsWrapper {
+    display: flex;
+    column-gap: 8px;
+    margin-block: 30px 20px;
+}
+
+.Tab {
+    padding: 8px 20px;
+    border-radius: 8px;
+    border: 1px solid #e0e0e0;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.Tab:hover:not(.TabActive) {
+    border-color: var(--mp-primary-green);
+    color: var(--mp-primary-green);
+}
+
+.TabActive {
+    background: var(--mp-primary-green);
+    border-color: var(--mp-primary-green);
+    color: var(--mp-primary-white);
+}

@@ -1,0 +1,55 @@
+.MainWrapper {
+    position: relative;
+}
+
+.MainWrapper:hover .Menu {
+    display: block;
+}
+
+.MainWrapper:hover .Arrow {
+    transform: rotate(180deg);
+}
+
+.DropdownTitle {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    padding: 8px 12px;
+    transition: color 0.3s;
+}
+
+.DropdownTitle:hover {
+    color: var(--mp-primary-green);
+}
+
+.Arrow {
+    transition: transform 0.3s;
+}
+
+.Menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 12px;
+    padding: 8px;
+    min-width: 160px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    z-index: 100;
+    display: none;
+}
+
+.MenuItem {
+    display: block;
+    padding: 8px 12px;
+    border-radius: 8px;
+    transition: background-color 0.3s, color 0.3s;
+    white-space: nowrap;
+}
+
+.MenuItem:hover {
+    background-color: var(--mp-primary-light-green);
+    color: var(--mp-primary-green);
+}

@@ -6,10 +6,9 @@
 
 .Link {
     padding: 8px 12px;
-    transition: opacity 0.3s;
-    background-color: lightcoral;
+    transition: color 0.3s;
 }
 
 .Link:hover {
-    opacity: 0.7;
+    color: var(--mp-primary-green);
 }

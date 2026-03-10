@@ -1,0 +1,23 @@
+.MainWrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: 30px;
+}
+
+.Card {
+    background-color: #161b22;
+    border: 1px solid #30363d;
+    color: var(--mp-primary-white);
+    border-radius: 24px;
+    padding: 24px;
+}
+
+.CardTitle {
+    font-size: 20px;
+    margin-bottom: 16px;
+}
+
+.CardDescription {
+    color: var(--mp-medium-grey);
+} 

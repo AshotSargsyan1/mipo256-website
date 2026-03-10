@@ -2,7 +2,11 @@
     --mp-header-height: 65px;
     --mp-primary-black: #000;
     --mp-primary-white: #fff;
+    --mp-medium-grey: #d9d9d9;
     --mp-bold-grey: #838383;
+    --mp-primary-green: #00ab55;
+    --mp-primary-light-green: #00ab551a;
+    --mp-box-shadow-bold: 4px 6px 14px rgb(15 23 42 / 25%);
 }
 
 *,
@@ -37,6 +41,22 @@ a {
 button {
     background-color: transparent;
     border: none;
+    font-size: inherit;
+    font-family: inherit;
+    color: inherit;
+}
+
+.VisuallyHidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
 }
 
 .MainContainer {
@@ -49,4 +69,10 @@ button {
     font-weight: 700;
     font-size: 50px;
     line-height: 1.25;
+}
+
+.TextMedium {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.5;
 }

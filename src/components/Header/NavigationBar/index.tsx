@@ -1,3 +1,4 @@
+import { HeaderDropdown } from "@/components";
 import styles from "./styles.module.css";
 
 export const NavigationBar = () => {
@@ -12,6 +13,9 @@ export const NavigationBar = () => {
                 </li>
                 <li>
                     <a href="#" className={styles.Link}>About</a>
+                </li>
+                <li>
+                    <HeaderDropdown />
                 </li>
             </ul>
         </nav>
