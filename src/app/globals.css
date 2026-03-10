@@ -2,6 +2,7 @@
     --mp-header-height: 65px;
     --mp-primary-black: #000;
     --mp-primary-white: #fff;
+    --mp-bold-grey: #838383;
 }
 
 *,
@@ -42,4 +43,10 @@ button {
     margin: 0 auto;
     max-width: 1330px;
     padding-inline: 25px;
+}
+
+.TextLarge {
+    font-weight: 700;
+    font-size: 50px;
+    line-height: 1.25;
 }
