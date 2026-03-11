@@ -1,13 +1,12 @@
 "use client"
-import { useState } from "react";
+import { Activity, useState } from "react";
 import styles from "./styles.module.css"
 import { pastEvents, upcomingEvents } from "@/utils";
 import { EEventsType } from "@/models";
+import { EventCard } from "./EventCard";
 
 export const Events = () => {
     const [activeEventsType, setActiveEventsType] = useState<EEventsType>(EEventsType.UPCOMING)
-
-    const events = activeEventsType === EEventsType.UPCOMING ? upcomingEvents : pastEvents
 
     return (
         <section className={`MainContainer ${styles.MainWrapper}`}>
@@ -29,19 +28,17 @@ export const Events = () => {
             </div>
 
             <div className={styles.CardsWrapper}>
-                {events.map(({ date, type, title, location, url }) => (
-                    <article className={styles.Card} key={title}>
-                        <div className={styles.CardMeta}>
-                            <span className={styles.Date}>{date}</span>
-                            <span className={styles.Badge}>{type}</span>
-                        </div>
-                        <h3 className={styles.CardTitle}>{title}</h3>
-                        <p className={styles.Location}>{location}</p>
-                        <a href={url} target="_blank" rel="noopener noreferrer" className={styles.Link}>
-                            Event Details
-                        </a>
-                    </article>
-                ))}
+                <Activity mode={activeEventsType === EEventsType.UPCOMING ? "visible" : "hidden"}>
+                    {upcomingEvents.map((event) => (
+                        <EventCard event={event} key={`upcoming-${event.title}`} />
+                    ))}
+                </Activity>
+
+                <Activity mode={activeEventsType === EEventsType.PAST ? "visible" : "hidden"}>
+                    {pastEvents.map((event) => (
+                        <EventCard event={event} key={`past-${event.title}`} />
+                    ))}
+                </Activity>
             </div>
         </section>
     )

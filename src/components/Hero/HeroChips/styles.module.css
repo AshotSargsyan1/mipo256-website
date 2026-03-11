@@ -1,0 +1,16 @@
+.MainWrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.Chip {
+  padding: 6px 14px;
+  border-radius: 8px;
+  background-color: var(--mp-primary-light-green);
+  border: 1px solid #a5d37f;
+  color: var(--mp-primary-green);
+  /* TODO: Fix fonts*/
+  font-size: 14px;
+  font-weight: 500;
+}

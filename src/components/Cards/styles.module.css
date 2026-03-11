@@ -7,7 +7,6 @@
 
 .Card {
     background-color: #161b22;
-    border: 1px solid #30363d;
     color: var(--mp-primary-white);
     border-radius: 24px;
     padding: 24px;

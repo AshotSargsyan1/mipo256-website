@@ -1,4 +1,17 @@
 .MainWrapper {
     padding-block: 20px;
-    background-color: purple;
+    background-color: var(--mp-primary-black);
+    color: var(--mp-primary-white);
+}
+
+.InnerWrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.LinksWrapper {
+    display: flex;
+    align-items: center;
+    gap: 8px 20px;
 }

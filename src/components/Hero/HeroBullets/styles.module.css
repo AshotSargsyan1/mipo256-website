@@ -1,0 +1,18 @@
+.MainWrapper {
+    color: var(--mp-bold-grey);
+    /* TODO: Fix fonts*/
+    line-height: 1.7;
+    margin-bottom: 40px;
+}
+
+.BioChunk {
+    display: flex;
+    align-items: center;
+    column-gap: 20px;
+}
+
+.BioChunk:not(:last-child) {
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid var(--mp-primary-green);
+}

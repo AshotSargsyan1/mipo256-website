@@ -5,7 +5,7 @@
     right: 0;
     z-index: 9999;
     height: var(--mp-header-height);
-    background-color: var(--mp-primary-white);
+    background-color: var(--mp-light-grey);
 }
 
 .InnerWrapper {

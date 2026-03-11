@@ -1,0 +1,66 @@
+.Card {
+    position: relative;
+    /* TODO: Pass another color in future */
+    background-color: #f9fafb;
+    border: 1px solid var(--mp-medium-grey);
+    border-radius: 16px;
+    padding: 30px 20px 20px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    transition: box-shadow 0.3s, transform 0.3s;
+}
+
+.Card:hover {
+    box-shadow: var(--mp-box-shadow-bold);
+    transform: translateY(-10px);
+}
+
+.Date {
+    /* TODO: Fix fonts */
+    font-size: 14px;
+    color: var(--mp-bold-grey);
+}
+
+.CardTitle {
+    /* TODO: Fix fonts */
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.Location {
+    /* TODO: Fix fonts */
+    font-size: 14px;
+    color: var(--mp-bold-grey);
+}
+
+.Link {
+    /* TODO: Fix fonts */
+    font-size: 14px;
+    color: var(--mp-primary-green);
+    margin-top: auto;
+    transition: opacity 0.3s;
+}
+
+.Link:hover {
+    opacity: 0.7;
+}
+
+.RibbonWrapper {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.Ribbon {
+    position: relative;
+    display: block;
+    padding: 4px 12px;
+    /* TODO: Fix fonts */
+    font-size: 12px;
+    line-height: 1.6;
+    font-weight: 600;
+    color: var(--mp-primary-white);
+    background-color: var(--mp-primary-green);
+    border-radius: 0 16px;
+}

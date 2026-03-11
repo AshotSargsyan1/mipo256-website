@@ -1,3 +1,5 @@
+import { IEvent } from "@/models";
+
 export const cards = [
     {
         title: 'Card Title 1',
@@ -13,7 +15,7 @@ export const cards = [
     },
 ];
 
-export const pastEvents = [
+export const pastEvents: IEvent[] = [
     { date: 'January 14, 2026', type: 'User Group', title: 'Event Title 1', location: 'City, Country', url: '#' },
     { date: 'January 26, 2026', type: 'Conference', title: 'Event Title 2', location: 'City, Country', url: '#' },
     { date: 'February 7, 2026', type: 'User Group', title: 'Event Title 3', location: 'City, Country', url: '#' },
@@ -24,7 +26,7 @@ export const pastEvents = [
     { date: 'March 10, 2026', type: 'Conference', title: 'Event Title 8', location: 'City, Country', url: '#' },
 ];
 
-export const upcomingEvents = [
+export const upcomingEvents: IEvent[] = [
     { date: 'March 22, 2026', type: 'User Group', title: 'Event Title 1', location: 'City, Country', url: '#' },
     { date: 'March 29, 2026', type: 'Conference', title: 'Event Title 2', location: 'City, Country', url: '#' },
     { date: 'March 30, 2026', type: 'User Group', title: 'Event Title 3', location: 'City, Country', url: '#' },
@@ -40,3 +42,5 @@ export const headerDropdownItems = [
     { label: 'Axelix Blog', href: '#' },
     { label: 'BellSoft', href: '#' },
 ];
+
+export const heroChips: string[] = ["Speaker", "OSS Contributor", "SWE"]

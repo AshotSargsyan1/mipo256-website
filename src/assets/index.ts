@@ -1,0 +1,15 @@
+export { default as LightLinkedinIcon } from "../assets/icons/linkedin_light.svg";
+export { default as LightTelegramIcon } from "../assets/icons/telegram_light.svg";
+export { default as LightFacebookIcon} from "../assets/icons/facebook_light.svg";
+export { default as LightGithubIcon } from "../assets/icons/github_light.svg";
+export { default as FacebookIcon } from "../assets/icons/facebook.svg";
+export { default as LinkedinIcon } from "../assets/icons/linkedin.svg";
+export { default as TelegramIcon } from "../assets/icons/telegram.svg";
+export { default as LightEmailIcon } from "./icons/email_light.svg";
+export { default as LightXIcon } from "../assets/icons/x_light.svg";
+export { default as GithubIcon } from "../assets/icons/github.svg";
+export { default as WriterIcon } from "../assets/icons/writer.svg";
+export { default as EmailIcon } from "../assets/icons/email.svg";
+export { default as AxelixLogo } from "./icons/axelix_logo.svg";
+export { default as MicIcon } from "../assets/icons/mic.svg";
+export { default as XIcon } from "../assets/icons/x.svg";
