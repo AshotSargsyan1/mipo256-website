@@ -38,9 +38,9 @@ export const upcomingEvents: IEvent[] = [
 ]
 
 export const headerDropdownItems = [
-    { label: 'Baeldung', href: '#' },
-    { label: 'Axelix Blog', href: '#' },
-    { label: 'BellSoft', href: '#' },
+    { label: 'Baeldung', href: 'https://www.baeldung.com/author/polivakhamikhail' },
+    { label: 'Axelix Blog', href: 'https://axelix.io/blog/authors/mikhail' },
+    { label: 'BellSoft', href: 'https://bell-sw.com/blog' },
 ];
 
 export const heroChips: string[] = ["Speaker", "OSS Contributor", "SWE"]

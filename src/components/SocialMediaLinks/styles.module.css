@@ -1,0 +1,5 @@
+.LinksWrapper {
+    display: flex;
+    align-items: center;
+    gap: 8px 20px;
+}

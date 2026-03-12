@@ -6,7 +6,7 @@
     display: block;
 }
 
-.MainWrapper:hover .Arrow {
+.MainWrapper:hover .ArrowIcon {
     transform: rotate(180deg);
 }
 
@@ -23,7 +23,7 @@
     color: var(--mp-primary-green);
 }
 
-.Arrow {
+.ArrowIcon {
     transition: transform 0.3s;
 }
 

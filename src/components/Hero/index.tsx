@@ -2,9 +2,9 @@ import MikhailPolivakhaPhoto from "@/assets/images/mikhail_polivakha_image.jpg"
 import Image from "next/image"
 import styles from "./styles.module.css"
 
-import { EmailIcon, FacebookIcon, GithubIcon, LinkedinIcon, TelegramIcon, XIcon } from "@/assets"
 import { HeroBullets } from "./HeroBullets"
 import { HeroChips } from "./HeroChips"
+import { SocialMediaLinks } from "../SocialMediaLinks"
 
 export const Hero = () => {
   return (
@@ -21,15 +21,7 @@ export const Hero = () => {
 
           <HeroBullets />
 
-          {/* TODO: Use SVGR in future */}
-          <div className={styles.LinksWrapper}>
-            <Image src={XIcon} alt="X icon" />
-            <Image src={FacebookIcon} alt="Facebook icon" />
-            <Image src={LinkedinIcon} alt="Linkedin icon" />
-            <Image src={EmailIcon} alt="Email icon" />
-            <Image src={TelegramIcon} alt="Telegram icon" />
-            <Image src={GithubIcon} alt="Github icon" />
-          </div>
+          <SocialMediaLinks wrapperStyles={styles.LinksWrapperStyles} />
 
           <HeroChips />
         </div>
