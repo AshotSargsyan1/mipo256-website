@@ -1,12 +1,20 @@
 "use client"
 import { Activity, useState } from "react";
 import styles from "./styles.module.css"
-import { pastEvents, upcomingEvents } from "@/utils";
-import { EEventsType } from "@/models";
+import { EVENTS_ALL_YEARS_FILTER, pastEvents } from "@/utils";
 import { EventCard } from "./EventCard";
+import { PastYearsDropdown } from "./PastYearsDropdown";
+import { getSortedUpcomingEvents } from "@/helpers";
+import { IEvent, TEventSelectedYear } from "@/models";
 
 export const Events = () => {
-    const [activeEventsType, setActiveEventsType] = useState<EEventsType>(EEventsType.UPCOMING)
+    const [selectedYear, setSelectedYear] = useState<TEventSelectedYear>(null)
+
+    const sortedUpcomingEvents = getSortedUpcomingEvents()
+
+    const filteredEvents: IEvent[] = selectedYear === EVENTS_ALL_YEARS_FILTER
+        ? pastEvents
+        : pastEvents.filter(event => new Date(event.date).getFullYear() === selectedYear);
 
     return (
         <section className={`MainContainer ${styles.MainWrapper}`}>
@@ -14,30 +22,32 @@ export const Events = () => {
 
             <div className={styles.TabsWrapper}>
                 <button
-                    className={`${styles.Tab} ${activeEventsType === EEventsType.UPCOMING ? styles.TabActive : ''}`}
-                    onClick={() => setActiveEventsType(EEventsType.UPCOMING)}
+                    onClick={() => setSelectedYear(null)}
+                    className={`${styles.Tab} ${!selectedYear ? styles.TabActive : ''}`}
                 >
                     Upcoming
                 </button>
-                <button
-                    className={`${styles.Tab} ${activeEventsType === EEventsType.PAST ? styles.TabActive : ''}`}
-                    onClick={() => setActiveEventsType(EEventsType.PAST)}
-                >
-                    Past
-                </button>
+
+                <PastYearsDropdown
+                    selectedYear={selectedYear}
+                    setSelectedYear={setSelectedYear}
+                    tabClassName={styles.Tab}
+                    tabActiveClassName={styles.TabActive}
+                />
             </div>
 
             <div className={styles.CardsWrapper}>
-                <Activity mode={activeEventsType === EEventsType.UPCOMING ? "visible" : "hidden"}>
-                    {upcomingEvents.map((event) => (
-                        <EventCard event={event} key={`upcoming-${event.title}`} />
+                <Activity mode={!selectedYear ? "visible" : "hidden"}>
+                    {sortedUpcomingEvents.map((event) => (
+                        <EventCard event={event} key={event.title} />
                     ))}
                 </Activity>
 
-                <Activity mode={activeEventsType === EEventsType.PAST ? "visible" : "hidden"}>
-                    {pastEvents.map((event) => (
-                        <EventCard event={event} key={`past-${event.title}`} />
-                    ))}
+                <Activity mode={selectedYear ? "visible" : "hidden"}>
+                    {filteredEvents
+                        .toSorted((prevElement, nextElement) => new Date(nextElement.date).getTime() - new Date(prevElement.date).getTime())
+                        .map((event) => <EventCard event={event} key={event.title} />)
+                    }
                 </Activity>
             </div>
         </section>

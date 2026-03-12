@@ -11,6 +11,10 @@
     column-gap: 20px;
 }
 
+.BioChunk>svg {
+    flex-shrink: 0;
+}
+
 .BioChunk:not(:last-child) {
     margin-bottom: 20px;
     padding-bottom: 20px;

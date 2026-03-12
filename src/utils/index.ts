@@ -1,5 +1,7 @@
 import { IEvent } from "@/models";
 
+export const EVENTS_ALL_YEARS_FILTER = "All" 
+
 export const cards = [
     {
         title: 'Card Title 1',
@@ -16,14 +18,16 @@ export const cards = [
 ];
 
 export const pastEvents: IEvent[] = [
-    { date: 'January 14, 2026', type: 'User Group', title: 'Event Title 1', location: 'City, Country', url: '#' },
-    { date: 'January 26, 2026', type: 'Conference', title: 'Event Title 2', location: 'City, Country', url: '#' },
-    { date: 'February 7, 2026', type: 'User Group', title: 'Event Title 3', location: 'City, Country', url: '#' },
-    { date: 'February 7, 2026', type: 'Conference', title: 'Event Title 4', location: 'City, Country', url: '#' },
-    { date: 'February 17, 2026', type: 'User Group', title: 'Event Title 5', location: 'City, Country', url: '#' },
-    { date: 'February 19, 2026', type: 'Conference', title: 'Event Title 6', location: 'City, Country', url: '#' },
-    { date: 'March 4, 2026', type: 'User Group', title: 'Event Title 7', location: 'City, Country', url: '#' },
-    { date: 'March 10, 2026', type: 'Conference', title: 'Event Title 8', location: 'City, Country', url: '#' },
+    { date: 'January 14, 2022', type: 'User Group', title: 'Event Title 1', location: 'City, Country', url: '#' },
+    { date: 'January 26, 2023', type: 'Conference', title: 'Event Title 2', location: 'City, Country', url: '#' },
+    { date: 'February 7, 2024', type: 'User Group', title: 'Event Title 3', location: 'City, Country', url: '#' },
+    { date: 'February 7, 2025', type: 'Conference', title: 'Event Title 4', location: 'City, Country', url: '#' },
+    { date: 'January 1, 2025', type: 'User Group', title: 'Event Title 5', location: 'City, Country', url: '#' },
+    { date: 'March 17, 2025', type: 'User Group', title: 'Event Title 5', location: 'City, Country', url: '#' },
+    { date: 'June 17, 2025', type: 'User Group', title: 'Event Title 5', location: 'City, Country', url: '#' },
+    { date: 'February 19, 2021', type: 'Conference', title: 'Event Title 6', location: 'City, Country', url: '#' },
+    { date: 'March 4, 2020', type: 'User Group', title: 'Event Title 7', location: 'City, Country', url: '#' },
+    { date: 'March 10, 2019', type: 'Conference', title: 'Event Title 8', location: 'City, Country', url: '#' },
 ];
 
 export const upcomingEvents: IEvent[] = [
