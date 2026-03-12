@@ -6,7 +6,7 @@ export const HeroChips = () => {
     return (
         <div className={styles.MainWrapper}>
             {heroChips.map((tag) => (
-                <div key={tag} className={styles.Chip}>
+                <div key={tag} className={`TextUltraSmall ${styles.Chip}`}>
                     {tag}
                 </div>
             ))}

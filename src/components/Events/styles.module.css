@@ -10,11 +10,8 @@
 
 .Tab {
     padding: 8px 20px;
-    border-radius: 8px;
+    border-radius: var(--mp-border-radius-small);
     border: 1px solid var(--mp-medium-grey);
-
-    /* TODO: Fix fonts */
-    font-size: 14px;
     font-weight: 500;
     cursor: pointer;
     transition: border 0.3s, color 0.3s;
@@ -26,7 +23,7 @@
 }
 
 .TabActive {
-    background: var(--mp-primary-green);
+    background-color: var(--mp-primary-green);
     border-color: var(--mp-primary-green);
     color: var(--mp-primary-white);
 }

@@ -6,11 +6,9 @@
 
 .Chip {
   padding: 6px 14px;
-  border-radius: 8px;
+  border-radius: var(--mp-border-radius-small);
   background-color: var(--mp-primary-light-green);
   border: 1px solid #a5d37f;
   color: var(--mp-primary-green);
-  /* TODO: Fix fonts*/
-  font-size: 14px;
-  font-weight: 500;
+  font-weight: 600;
 }

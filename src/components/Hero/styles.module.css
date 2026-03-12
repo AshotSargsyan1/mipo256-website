@@ -17,9 +17,6 @@
 }
 
 .Nickname {
-  /* TODO: Fix fonts*/
-  font-size: 22px;
-  font-weight: 500;
   margin-block: 10px 30px;
   color: var(--mp-primary-green);
 }
@@ -31,7 +28,7 @@
 .Image {
   width: 380px;
   height: 460px;
-  border-radius: 24px;
+  border-radius: var(--mp-border-radius-large);
   object-fit: cover;
   object-position: top;
   display: block;

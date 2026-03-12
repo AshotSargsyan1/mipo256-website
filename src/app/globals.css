@@ -7,7 +7,10 @@
     --mp-bold-grey: #838383;
     --mp-primary-green: #6cb52d;
     --mp-primary-light-green: #def1d5;
-    --mp-box-shadow-bold: 4px 6px 14px rgb(15 23 42 / 25%);
+    --mp-box-shadow: 4px 6px 14px rgb(15 23 42 / 25%);
+    --mp-border-radius-large: 24px;
+    --mp-border-radius-large: 12px;
+    --mp-border-radius-small: 8px;
 }
 
 *,
@@ -45,6 +48,7 @@ button {
     font-size: inherit;
     font-family: inherit;
     color: inherit;
+    line-height: inherit;
 }
 
 .VisuallyHidden {
@@ -75,5 +79,16 @@ button {
 .TextMedium {
     font-weight: 700;
     font-size: 36px;
+    line-height: 1.5;
+}
+
+.TextSmall {
+    font-size: 22px;
+    line-height: 1.3;
+    font-weight: 600;
+}
+
+.TextUltraSmall {
+    font-size: 14px;
     line-height: 1.5;
 }

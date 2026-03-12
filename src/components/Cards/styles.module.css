@@ -8,12 +8,11 @@
 .Card {
     background-color: #161b22;
     color: var(--mp-primary-white);
-    border-radius: 24px;
+    border-radius: var(--mp-border-radius-large);
     padding: 24px;
 }
 
 .CardTitle {
-    font-size: 20px;
     margin-bottom: 16px;
 }
 

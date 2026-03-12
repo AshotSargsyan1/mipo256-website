@@ -15,7 +15,7 @@ export const Hero = () => {
             Mikhail Polivakha
           </h1>
 
-          <p className={styles.Nickname}>
+          <p className={`TextSmall ${styles.Nickname}`}>
             aka mipo256
           </p>
 

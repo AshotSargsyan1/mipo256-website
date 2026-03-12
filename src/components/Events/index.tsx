@@ -23,7 +23,7 @@ export const Events = () => {
             <div className={styles.TabsWrapper}>
                 <button
                     onClick={() => setSelectedYear(null)}
-                    className={`${styles.Tab} ${!selectedYear ? styles.TabActive : ''}`}
+                    className={`TextUltraSmall ${styles.Tab} ${!selectedYear ? styles.TabActive : ''}`}
                 >
                     Upcoming
                 </button>
@@ -31,8 +31,6 @@ export const Events = () => {
                 <PastYearsDropdown
                     selectedYear={selectedYear}
                     setSelectedYear={setSelectedYear}
-                    tabClassName={styles.Tab}
-                    tabActiveClassName={styles.TabActive}
                 />
             </div>
 

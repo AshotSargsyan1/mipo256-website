@@ -5,15 +5,14 @@ import { getPastEventsSortedYears } from '@/helpers';
 import styles from './styles.module.css';
 import { TEventSelectedYear } from '@/models';
 import { EVENTS_ALL_YEARS_FILTER } from '@/utils';
+import eventsStyles from "../styles.module.css"
 
 interface IProps {
     selectedYear: TEventSelectedYear;
     setSelectedYear: Dispatch<SetStateAction<TEventSelectedYear>>;
-    tabClassName: string;
-    tabActiveClassName: string;
 }
 
-export const PastYearsDropdown = ({ selectedYear, setSelectedYear, tabClassName, tabActiveClassName }: IProps) => {
+export const PastYearsDropdown = ({ selectedYear, setSelectedYear }: IProps) => {
     const wrapperRef = useRef<HTMLDivElement>(null);
     const [isOpen, setIsOpen] = useState<boolean>(false);
 
@@ -36,9 +35,9 @@ export const PastYearsDropdown = ({ selectedYear, setSelectedYear, tabClassName,
     };
 
     return (
-        <div className={styles.MainWrapper} ref={wrapperRef}>
+        <div className={`TextUltraSmall ${styles.MainWrapper}`} ref={wrapperRef}>
             <button
-                className={`${tabClassName} ${selectedYear ? tabActiveClassName : ''} ${styles.DropdownTitle}`}
+                className={`${eventsStyles.Tab} ${selectedYear ? eventsStyles.TabActive : ''} ${styles.DropdownTitle}`}
                 onClick={() => setIsOpen(!isOpen)}
             >
                 {selectedYear || "Year"}
