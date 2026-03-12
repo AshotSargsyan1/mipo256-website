@@ -1,6 +1,5 @@
 .MainWrapper {
     color: var(--mp-bold-grey);
-    /* TODO: Fix fonts*/
     line-height: 1.7;
     margin-bottom: 40px;
 }

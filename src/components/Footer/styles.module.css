@@ -8,4 +8,11 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 20px;
+}
+
+@media (width <=800px) {
+    .InnerWrapper {
+        flex-direction: column;
+    }
 }

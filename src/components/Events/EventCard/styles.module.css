@@ -1,6 +1,5 @@
 .Card {
     position: relative;
-    /* TODO: Pass another color in future */
     background-color: #f9fafb;
     border: 1px solid var(--mp-medium-grey);
     border-radius: 16px;
@@ -9,6 +8,7 @@
     flex-direction: column;
     gap: 8px;
     transition: box-shadow 0.3s, transform 0.3s;
+    box-shadow: var(--mp-box-shadow-light);
 }
 
 .Card:hover {

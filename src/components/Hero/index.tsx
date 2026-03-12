@@ -31,6 +31,7 @@ export const Hero = () => {
             src={MikhailPolivakhaPhoto}
             alt="Mikhail Polivakha"
             className={styles.Image}
+            priority
           />
         </div>
       </div>
