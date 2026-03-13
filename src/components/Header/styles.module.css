@@ -6,6 +6,7 @@
     z-index: 9999;
     height: var(--mp-header-height);
     background-color: var(--mp-light-grey);
+    box-shadow: var(--mp-box-shadow-light);
 }
 
 .InnerWrapper {
@@ -13,4 +14,95 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+.Burger {
+    display: none;
+}
+
+.MobileMenuWrapper {
+    display: none;
+}
+
+@media (width <=530px) {
+    .DesktopMenuWrapper {
+        display: none;
+    }
+
+    .Burger {
+        position: relative;
+        display: block;
+        width: 30px;
+        height: 20px;
+    }
+
+    .Burger:before,
+    .Burger:after {
+        content: "";
+        position: absolute;
+        left: 0;
+        right: 0;
+        height: 3px;
+        background-color: var(--mp-primary-black);
+    }
+
+    .Burger:before {
+        top: 0;
+        transition: all 0.3s;
+    }
+
+    .Burger:after {
+        bottom: 0;
+        transition: all 0.3s;
+    }
+
+    .BurgerCenterLine {
+        position: absolute;
+        background-color: var(--mp-primary-black);
+        left: 0;
+        right: 0;
+        height: 3px;
+        top: 9px
+    }
+
+    .OpenedBurger {
+        transition: all 0.3s;
+    }
+
+    .OpenedBurger:before {
+        transform: rotate(45deg);
+        top: 9px;
+    }
+
+    .OpenedBurger:after {
+        transform: rotate(-45deg);
+        bottom: 9px;
+    }
+
+    .OpenedBurger>.BurgerCenterLine {
+        transform: scale(0);
+    }
+
+    .MobileMenuWrapper {
+        display: block;
+        position: fixed;
+        top: 0;
+        left: 50%;
+        transform: translate(-50%, 0);
+        width: calc(100% - 50px);
+        opacity: 0;
+        pointer-events: none;
+        transition: all 0.3s;
+        background-color: var(--mp-light-grey);
+    }
+
+    .MobileMenuOpened {
+        opacity: 1;
+        pointer-events: all;
+        transform: translate(-50%, calc(var(--mp-header-height) + 10px));
+        padding: 16px;
+        border-radius: var(--mp-border-radius-large);
+        border: 1px solid var(--mp-bold-grey);
+        box-shadow: var(--mp-box-shadow);
+    }
 }

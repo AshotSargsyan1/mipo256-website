@@ -2,14 +2,14 @@
   min-height: calc(100vh - var(--mp-header-height));
   display: flex;
   align-items: center;
-  background-color: var(--mp-light-grey);
+  padding-block: 40px;
 }
 
 .InnerWrapper {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 100px;
+  gap: 60px;
 }
 
 .ContentWrapper {
@@ -36,4 +36,27 @@
 
 .LinksWrapperStyles {
   margin-block: 20px;
+}
+
+@media (width <=1030px) {
+  .InnerWrapper {
+    flex-direction: column-reverse;
+    gap: 40px;
+  }
+
+  .Image {
+    width: 300px;
+    height: 380px;
+  }
+
+  .ContentWrapper {
+    text-align: center;
+  }
+}
+
+@media (width <=650px) {
+  .Image {
+    width: 250px;
+    height: 300px;
+  }
 }

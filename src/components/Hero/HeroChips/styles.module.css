@@ -12,3 +12,9 @@
   color: var(--mp-primary-green);
   font-weight: 600;
 }
+
+@media (width <=1030px) {
+  .MainWrapper {
+    justify-content: center;
+  }
+}

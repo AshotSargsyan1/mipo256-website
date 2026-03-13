@@ -8,7 +8,7 @@ interface IProps {
 
 export const SocialMediaLinks = ({ wrapperStyles }: IProps) => {
     return (
-        <div className={`${wrapperStyles} ${styles.LinksWrapper}`}>
+        <div className={`${wrapperStyles} ${styles.MainWrapper}`}>
             <a href="https://x.com/mpolivaha" target="_blank" rel="noopener noreferrer">
                 <XIcon />
             </a>

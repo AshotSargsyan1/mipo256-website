@@ -1,7 +1,7 @@
 .LinksWrapper {
     display: flex;
     align-items: center;
-    gap: 8px;
+    gap: 4px;
 }
 
 .Link {
@@ -11,4 +11,21 @@
 
 .Link:hover {
     color: var(--mp-primary-green);
+}
+
+.LinksWrapper li {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.Link {
+    width: 100%;
+}
+
+@media (width <=530px) {
+    .LinksWrapper {
+        flex-direction: column;
+        align-items: flex-start;
+    }
 }

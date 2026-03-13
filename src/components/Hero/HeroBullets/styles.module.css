@@ -19,3 +19,20 @@
     padding-bottom: 20px;
     border-bottom: 1px solid var(--mp-primary-green);
 }
+
+@media (width <=1030px) {
+    .BioChunk svg {
+        height: 35px;
+        width: 35px;
+    }
+
+    .BioDescription {
+        text-align: left;
+    }
+}
+
+@media (width <=400px) {
+    .BioChunk svg {
+        display: none;
+    }
+}

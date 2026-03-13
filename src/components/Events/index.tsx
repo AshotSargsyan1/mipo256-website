@@ -18,7 +18,7 @@ export const Events = () => {
 
     return (
         <section className={`MainContainer ${styles.MainWrapper}`}>
-            <h2 className="TextMedium">Events</h2>
+            <h2 className={`TextMedium ${styles.Title}`}>Events</h2>
 
             <div className={styles.TabsWrapper}>
                 <button
@@ -37,14 +37,14 @@ export const Events = () => {
             <div className={styles.CardsWrapper}>
                 <Activity mode={!selectedYear ? "visible" : "hidden"}>
                     {sortedUpcomingEvents.map((event) => (
-                        <EventCard event={event} key={event.title} />
+                        <EventCard event={event} key={event.title + event.location + event.date} />
                     ))}
                 </Activity>
 
                 <Activity mode={selectedYear ? "visible" : "hidden"}>
                     {filteredEvents
                         .toSorted((prevElement, nextElement) => new Date(nextElement.date).getTime() - new Date(prevElement.date).getTime())
-                        .map((event) => <EventCard event={event} key={event.title} />)
+                        .map((event) => <EventCard event={event} key={event.title + event.location + event.date} />)
                     }
                 </Activity>
             </div>

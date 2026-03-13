@@ -29,7 +29,7 @@ html {
 body {
     font-size: 18px;
     line-height: 1.4;
-    background-color: var(--mp-light-grey);
+    background-color: var(--mp-primary-white);
     color: var(--mp-primary-black);
 }
 

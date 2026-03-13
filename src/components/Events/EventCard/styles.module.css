@@ -3,7 +3,7 @@
     background-color: #f9fafb;
     border: 1px solid var(--mp-medium-grey);
     border-radius: 16px;
-    padding: 30px 20px 20px 20px;
+    padding: 35px 20px 20px 20px;
     display: flex;
     flex-direction: column;
     gap: 8px;
@@ -21,6 +21,9 @@
 }
 
 .CardTitle {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
     font-weight: 700;
 }
 

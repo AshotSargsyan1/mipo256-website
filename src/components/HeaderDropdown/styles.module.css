@@ -1,13 +1,6 @@
 .MainWrapper {
     position: relative;
-}
-
-.MainWrapper:hover .Menu {
-    display: block;
-}
-
-.MainWrapper:hover .ArrowIcon {
-    transform: rotate(180deg);
+    width: 100%;
 }
 
 .DropdownTitle {
@@ -17,6 +10,7 @@
     cursor: pointer;
     padding: 8px 12px;
     transition: color 0.3s;
+    width: 100%;
 }
 
 .DropdownTitle:hover {
@@ -47,9 +41,28 @@
     border-radius: var(--mp-border-radius-small);
     transition: background-color 0.3s, color 0.3s;
     white-space: nowrap;
+    width: 100%;
 }
 
 .MenuItem:hover {
     background-color: var(--mp-primary-light-green);
     color: var(--mp-primary-green);
+}
+
+.Open .Menu {
+    display: block;
+}
+
+.Open .ArrowIcon {
+    transform: rotate(180deg);
+}
+
+@media (hover: hover) {
+    .MainWrapper:hover .Menu {
+        display: block;
+    }
+
+    .MainWrapper:hover .ArrowIcon {
+        transform: rotate(180deg);
+    }
 }
