@@ -1,4 +1,4 @@
-export { default as SoftwareEngineerIcon } from "../assets/icons/software_engineer.svg";
+export { default as SoftwareEngineerIcon } from "../assets/icons/softwareEngineer.svg";
 export { default as FacebookIcon } from "../assets/icons/facebook.svg";
 export { default as LinkedinIcon } from "../assets/icons/linkedin.svg";
 export { default as TelegramIcon } from "../assets/icons/telegram.svg";
@@ -8,3 +8,5 @@ export { default as EmailIcon } from "../assets/icons/email.svg";
 export { default as MicIcon } from "../assets/icons/mic.svg";
 export { default as ArrowIcon } from "../assets/icons/arrow.svg";
 export { default as XIcon } from "../assets/icons/x.svg";
+
+export { default as MikhailPolivakhaImage } from "../assets/images/mikhailPolivakhaImage.jpg"

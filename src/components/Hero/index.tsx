@@ -1,10 +1,11 @@
-import MikhailPolivakhaPhoto from "@/assets/images/mikhail_polivakha_image.jpg"
 import Image from "next/image"
 import styles from "./styles.module.css"
 
 import { HeroBullets } from "./HeroBullets"
 import { HeroChips } from "./HeroChips"
 import { SocialMediaLinks } from "../SocialMediaLinks"
+import { CircuitLines } from "./CircuitLines"
+import { MikhailPolivakhaImage } from "@/assets"
 
 export const Hero = () => {
   return (
@@ -27,8 +28,9 @@ export const Hero = () => {
         </div>
 
         <div className={styles.ImageWrapper}>
+          <CircuitLines />
           <Image
-            src={MikhailPolivakhaPhoto}
+            src={MikhailPolivakhaImage}
             alt="Mikhail Polivakha"
             className={styles.Image}
             priority
