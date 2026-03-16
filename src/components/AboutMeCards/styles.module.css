@@ -5,6 +5,13 @@
     column-gap: 30px;
 }
 
+.CardsWrapper {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    width: 100%;
+}
+
 .Card {
     background-color: #161b22;
     color: var(--mp-primary-white);
@@ -18,4 +25,10 @@
 
 .CardDescription {
     color: var(--mp-medium-grey);
-} 
+}
+
+@media (width <=930px) {
+    .CardsWrapper {
+        grid-template-columns: 1fr;
+    }
+}

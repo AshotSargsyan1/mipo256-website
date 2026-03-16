@@ -9,3 +9,10 @@
         justify-content: center;
     }
 }
+
+@media (width <=650px) {
+    .MainWrapper svg {
+        height: 25px;
+        width: 25px;
+    }
+}

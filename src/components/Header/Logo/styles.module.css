@@ -1,0 +1,12 @@
+.Initials {
+    font-size: 40px;
+    font-weight: 700;
+    color: var(--mp-primary-green);
+    line-height: 1;
+}
+
+@media (width <=650px) {
+    .Initials {
+        font-size: 26px;
+    }
+}

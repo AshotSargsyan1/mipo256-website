@@ -2,6 +2,7 @@
 import { useEffect, useRef, useState } from "react";
 import { NavigationBar } from "./NavigationBar";
 import styles from "./styles.module.css";
+import { Logo } from "./Logo";
 
 export const Header = () => {
     const wrapperRef = useRef<HTMLDivElement>(null);
@@ -9,7 +10,7 @@ export const Header = () => {
 
     useEffect(() => {
         const handleClickOutside = (e: MouseEvent): void => {
-            if (wrapperRef.current && !wrapperRef.current.contains(e.target)) {
+            if (wrapperRef.current && !wrapperRef.current.contains(e.target as Node)) {
                 setIsBurgerOpen(false);
             }
         };
@@ -22,7 +23,7 @@ export const Header = () => {
         <>
             <header className={styles.MainWrapper} ref={wrapperRef}>
                 <div className={`MainContainer ${styles.InnerWrapper}`}>
-                    <div>Placeholder</div>
+                    <Logo />
                     <div className={styles.DesktopMenuWrapper}>
                         <NavigationBar />
                     </div>
