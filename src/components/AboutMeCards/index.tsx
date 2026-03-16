@@ -4,7 +4,7 @@ import styles from './styles.module.css';
 
 export const AboutMeCards = () => {
     return (
-        <section className={`MainContainer ${styles.MainWrapper}`}>
+        <section className={`MainContainer ${styles.MainWrapper}`} id="about">
             <h2 className="VisuallyHidden">About Mihail Polivakha</h2>
             <div className={styles.CardsWrapper}>
                 {cards.map(({ title, description }) => (

@@ -6,13 +6,13 @@ export const NavigationBar = () => {
         <nav>
             <ul className={styles.LinksWrapper}>
                 <li>
-                    <a href="#" className={styles.Link}>Home</a>
+                    <a href="#home" className={styles.Link}>Home</a>
                 </li>
                 <li>
-                    <a href="#" className={styles.Link}>Conferences</a>
+                    <a href="#about" className={styles.Link}>About</a>
                 </li>
                 <li>
-                    <a href="#" className={styles.Link}>About</a>
+                    <a href="#events" className={styles.Link}>Events</a>
                 </li>
                 <li>
                     <HeaderDropdown />

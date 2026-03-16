@@ -9,7 +9,7 @@ import { MikhailPolivakhaImage } from "@/assets"
 
 export const Hero = () => {
   return (
-    <section className={styles.MainWrapper}>
+    <section className={styles.MainWrapper} id="home">
       <div className={`MainContainer ${styles.InnerWrapper}`}>
         <div className={styles.ContentWrapper}>
           <h1 className="TextLarge">

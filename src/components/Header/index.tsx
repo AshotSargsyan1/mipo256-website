@@ -6,11 +6,16 @@ import { Logo } from "./Logo";
 
 export const Header = () => {
     const wrapperRef = useRef<HTMLDivElement>(null);
-    const [isBurgerOpen, setIsBurgerOpen] = useState<boolean>(false)
+    const mobileMenuRef = useRef<HTMLDivElement>(null);
+    const [isBurgerOpen, setIsBurgerOpen] = useState<boolean>(false);
 
     useEffect(() => {
         const handleClickOutside = (e: MouseEvent): void => {
-            if (wrapperRef.current && !wrapperRef.current.contains(e.target as Node)) {
+            const target = e.target as Node;
+            const isInsideHeader = wrapperRef.current?.contains(target);
+            const isInsideMobileMenu = mobileMenuRef.current?.contains(target);
+
+            if (!isInsideHeader && !isInsideMobileMenu) {
                 setIsBurgerOpen(false);
             }
         };
@@ -27,13 +32,12 @@ export const Header = () => {
                     <div className={styles.DesktopMenuWrapper}>
                         <NavigationBar />
                     </div>
-
                     <div className={`${styles.Burger} ${isBurgerOpen ? styles.OpenedBurger : ""}`} onClick={() => setIsBurgerOpen(!isBurgerOpen)}>
                         <span className={styles.BurgerCenterLine} />
                     </div>
                 </div>
             </header>
-            <div className={`MainContainer ${styles.MobileMenuWrapper} ${isBurgerOpen ? styles.MobileMenuOpened : ""}`}>
+            <div ref={mobileMenuRef} className={`MainContainer ${styles.MobileMenuWrapper} ${isBurgerOpen ? styles.MobileMenuOpened : ""}`}>
                 <NavigationBar />
             </div>
         </>

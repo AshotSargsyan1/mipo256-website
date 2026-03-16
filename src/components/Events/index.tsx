@@ -17,7 +17,7 @@ export const Events = () => {
         : pastEvents.filter(event => new Date(event.date).getFullYear() === selectedYear);
 
     return (
-        <section className={`MainContainer ${styles.MainWrapper}`}>
+        <section className={`MainContainer ${styles.MainWrapper}`} id="events">
             <h2 className={`TextMedium ${styles.Title}`}>Events</h2>
 
             <div className={styles.TabsWrapper}>
